@@ -9,8 +9,8 @@
 |---|---|---|---|
 | Task A |  |  |  |
 | Task B |熊家逸20241050206  | Enumerating objects: 9, done.Counting objects: 100% (9/9), done.Delta compression using up to 2 threadsCompressing objects: 100% (5/5), done.Writing objects: 100% (5/5), 1012 bytes 1012.00 KiB/s, done.Total 5 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)remote: Resolving deltas: 100% (2/2), completed with 2 local objects.To https://github.com/Xianghua-YNU/compphys2026-week06-calculus-buglord   d1bed09..0b9ef1d  main -> main|完成lab1 partB  |
-| Task C |  |  |  |
-| Bonus |  |  |  |
+| Task C | 李博睿20241050148 |  | 完成Task C |
+| Bonus | 李博睿20241050148 |  | 完成Bonus |
 
 ---
 
@@ -59,19 +59,18 @@
 
 ## 5. Bonus：方板引力场（30分）
 
-- 你实现的二维高斯积分方案：  
-- 参数设置（L, M_plate, n）：  
+- 你实现的二维高斯积分方案： 采用张量积型高斯-勒让德求积法实现二维积分，先生成一维n阶高斯-勒让德节点与权重，再通过网格与外积构造二维节点和权重，将积分区间从[-1,1]映射到[-L/2,L/2]，计算被积函数后加权求和完成二维积分。
+- 参数设置（L, M_plate, n）： 边长L=10m，方板质量M_plate=1e4 kg，高斯积分阶数n=8，万有引力常数G=6.674e-11，测试质点质量1kg。 
 - 结果表：
 
 | z (m) | Fz (N) |
 |---:|---:|
-| 0.2 |  |
-| 1.0 |  |
-| 5.0 |  |
-| 10.0 |  |
+| 0.2 | 1.010652e-08 |
+| 1.0 |3.021220e-08 |
+| 5.0 | 1.397794e-08 |
+| 10.0 |5.375451e-09 |
 
-- 你对近场/远场行为的解释：  
-
+- 你对近场/远场行为的解释： 近场z远小于边长L时，引力z分量随高度上升先增大到峰值，因为极近板面时大量质量元的引力z分量相互抵消，合力偏小。远场z远大于边长L时，引力随z增大单调递减，方板可近似为质点，引力趋近于质点万有引力公式。中场z与板边长相近时，力从峰值持续下降，既不能用无限大板也不能用质点近似，需精确数值积分。 
 ---
 
 ## 6. AI 代码审查记录（必填）
