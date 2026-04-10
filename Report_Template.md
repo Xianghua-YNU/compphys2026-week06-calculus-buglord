@@ -8,7 +8,15 @@
 | 任务 | 负责同学 | Commit Hash | 贡献说明 |
 |---|---|---|---|
 | Task A |  |  |  |
-| Task B |  |  |  |
+| Task B |熊家逸20241050206  | Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 1012 bytes | 1012.00 KiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Xianghua-YNU/compphys2026-week06-calculus-buglord
+   d1bed09..0b9ef1d  main -> main | 完成lab1 partB |
 | Task C |  |  |  |
 | Bonus |  |  |  |
 
@@ -33,15 +41,15 @@
 
 ## 3. Task B：梯形 vs Simpson + Debye 积分（24分）
 
-- 你实现的两个积分器是否通过偶数分段与边界检查：  
+- 你实现的两个积分器是否通过偶数分段与边界检查：trapezoid_composite(f, a, b, n):检查 n > 0若 n <= 0 会抛出 ValueErrorsimpson_composite(f, a, b, n):检查 n > 0检查 n 必须为偶数若 n 为奇数会抛出 ValueError所以两个积分器都做了边界检查；Simpson 方法额外强制要求偶数分段。  
 - 同一参数下方法比较：
 
 | 方法 | n | 积分值 | 误差估计 | 结论 |
 |---|---:|---:|---:|---|
-| 梯形法 |  |  |  |  |
-| Simpson 法 |  |  |  |  |
+| 梯形法 | 100 |0.20003333300000006 |3.33×10⁻⁵  |  精度一般|
+| Simpson 法 | 100 |  0.20000000133333332|  1.33×10⁻⁹|明显更高精度  |
 
-- 对 Debye 积分结果的解释：  
+- 对 Debye 积分结果的解释：  debye_integral 结果符合预期且为正值Simpson 法在 Debye 积分上同样比梯形法更准确这说明在相同分段数下，Simpson 法对于这种平滑积分核收敛更快
 
 ---
 
