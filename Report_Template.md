@@ -9,8 +9,8 @@
 |---|---|---|---|
 | Task A | 韩雨洁 |  | 完成任务A |
 | Task B |熊家逸20241050206  | Enumerating objects: 9, done.Counting objects: 100% (9/9), done.Delta compression using up to 2 threadsCompressing objects: 100% (5/5), done.Writing objects: 100% (5/5), 1012 bytes 1012.00 KiB/s, done.Total 5 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)remote: Resolving deltas: 100% (2/2), completed with 2 local objects.To https://github.com/Xianghua-YNU/compphys2026-week06-calculus-buglord   d1bed09..0b9ef1d  main -> main|完成lab1 partB  |
-| Task C | 李博睿20241050148 |  | 完成Task C |
-| Bonus | 李博睿20241050148 |  | 完成Bonus |
+| Task C | 李博睿20241050148 | cc7ae4a69f36c124939baae0ff107e9b9a488ab4 | 完成Task C |
+| Bonus | 李博睿20241050148 | 38b16d92a262a191c6b79907996933213fa42358 | 完成Bonus |
 
 ---
 
